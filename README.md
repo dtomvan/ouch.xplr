@@ -1,19 +1,19 @@
-xplr plugin template
+ouch.xplr
 ====================
+This plugin uses `ouch` to compress and decompress files.
 
-Use this template to [write your own xplr plugin](https://arijitbasu.in/xplr/en/writing-plugins.html).
+*WARNING*: There is a problem in ouch with file formats, this plugin will not work entirely yet.
 
+Tracking issue: https://github.com/ouch-org/ouch/issues/165
 
 Requirements
 ------------
 
-- Some tool
+- `ouch` (https://github.com/ouch-org/ouch)
 
 
 Installation
 ------------
-
-### Install manually
 
 - Add the following line in `~/.config/xplr/init.lua`
 
@@ -26,26 +26,26 @@ Installation
   ```bash
   mkdir -p ~/.config/xplr/plugins
 
-  git clone https://github.com/me/{plugin}.xplr ~/.config/xplr/plugins/{plugin}
+  git clone https://github.com/dtomvan/ouch.xplr ~/.config/xplr/plugins/ouch
   ```
 
 - Require the module in `~/.config/xplr/init.lua`
 
   ```lua
-  require("{plugin}").setup()
-  
-  -- Or
-  
-  require("{plugin}").setup{
-    mode = "action",
-    key = ":",
-  }
+  require("ouch").setup()
 
-  -- Type `::` and enjoy.
+  -- Or
+
+  require("ouch").setup{
+    mode = "action",
+    key = "o",
+  }
   ```
 
 
 Features
 --------
 
-- Some cool feature
+- Wraps all features from the `ouch` tool:
+    - `ouch decompress`
+    - `ouch compress`
