@@ -10,8 +10,6 @@ with the new features.
 cargo install --git https://github.com/ouch-org/ouch --tag 0.3.1
 ```
 
-Tracking issue: https://github.com/ouch-org/ouch/issues/165
-
 Requirements
 ------------
 
