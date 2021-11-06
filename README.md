@@ -2,7 +2,13 @@ ouch.xplr
 ====================
 This plugin uses `ouch` to compress and decompress files.
 
-*WARNING*: There is a problem in ouch with file formats, this plugin will not work entirely yet.
+*WARNING*: Use version `0.3.1` of ouch. Older versions contain bugs
+and newer versions are not (yet) supported by this plugin. If ouch
+releases a new version I will try to update this to be compatible
+with the new features.
+```console
+cargo install --git https://github.com/ouch-org/ouch --tag 0.3.1
+```
 
 Tracking issue: https://github.com/ouch-org/ouch/issues/165
 

@@ -57,7 +57,7 @@ local function ouch_decompress(args)
     end
     local from = fnargs_to_target(args)
 
-    os.execute("ouch d " .. from .. " -o " .. target)
+    os.execute("ouch d " .. from .. " --dir " .. target)
     print("[press enter to continue]")
     io.read()
     return { "ExplorePwdAsync", "PopMode" }
