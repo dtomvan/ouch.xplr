@@ -1,28 +1,31 @@
-ouch.xplr
-====================
+# ouch.xplr
+
 This plugin uses `ouch` to compress and decompress files.
 
-*WARNING*: Use version `0.3.1` of ouch. Older versions contain bugs
+_WARNING_: Use version `0.3.1` of ouch. Older versions contain bugs
 and newer versions are not (yet) supported by this plugin. If ouch
 releases a new version I will try to update this to be compatible
 with the new features.
+
 ```console
 cargo install --git https://github.com/ouch-org/ouch --tag 0.3.1
 ```
 
-Requirements
-------------
+## Requirements
 
 - `ouch` (https://github.com/ouch-org/ouch)
 
-
-Installation
-------------
+## Installation
 
 - Add the following line in `~/.config/xplr/init.lua`
 
   ```lua
-  package.path = os.getenv("HOME") .. '/.config/xplr/plugins/?/src/init.lua'
+  local home = os.getenv("HOME")
+  package.path = home
+  .. "/.config/xplr/plugins/?/init.lua;"
+  .. home
+  .. "/.config/xplr/plugins/?.lua;"
+  .. package.path
   ```
 
 - Clone the plugin
@@ -46,10 +49,8 @@ Installation
   }
   ```
 
-
-Features
---------
+## Features
 
 - Wraps all features from the `ouch` tool:
-    - `ouch decompress`
-    - `ouch compress`
+  - `ouch decompress`
+  - `ouch compress`
